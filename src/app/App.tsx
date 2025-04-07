@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import Header from "@/components/header";
 import { RootState, useAppSelector } from "@/state/store";
 
@@ -25,6 +26,7 @@ const App = ({children}:{children:any}) => {
             menuItems={menuItems}
             />
             {children}
+        <Footer/>
         </>
     );
 }

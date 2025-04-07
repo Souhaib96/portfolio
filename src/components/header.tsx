@@ -9,6 +9,8 @@ import { NavLinks } from "@/type";
 import { RootState, useAppDispatch, useAppSelector } from "@/state/store";
 import { logout } from "@/state/login/loginSlice";
 import { Button } from "./ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { AlignJustify, Apple } from "lucide-react";
 
 
 interface HeaderProps {
@@ -33,7 +35,10 @@ const Header = (props:HeaderProps) => {
                     <Link href="/">
                         <Logo src={props.logoSrc}/>
                     </Link>
-                    <NavigationMenu>
+
+                    {//Main header
+                    }
+                    <NavigationMenu className="hidden md:flex">
                         <NavigationMenuList>
                             {
                                 props.menuItems?.map((item, index) => (
@@ -53,10 +58,53 @@ const Header = (props:HeaderProps) => {
                                     </Button>
                                 
                             }
-
-                           
                         </NavigationMenuList>
                     </NavigationMenu>
+
+                    {//Mobile header
+                    }
+                    <div className='md:hidden'>
+                        <Sheet>
+                            <SheetTrigger>
+                            <AlignJustify />
+                            </SheetTrigger>
+                            <SheetContent side='left'>
+                                <Link href="/">
+                                    <Logo src={props.logoSrc}/>
+                                </Link>
+                                <nav className='flex flex-col gap-3 lg:gap-4 mt-6'>
+                                    {
+                                        props.menuItems?.map((item, index) => (
+                                            <Link key={index} href={item.href}>
+                                                {item.name}
+                                            </Link>
+                                        ))
+                                    }
+                                    {
+                                        loginState.isLoggedIn &&
+                                            <Button onClick={onLogout} >
+                                                Déconnexion
+                                            </Button>
+                                    }
+                                </nav>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+
+                </div>
+            </ContainerContent>
+        </header>
+    );
+}
+
+const MobileHeader = (props:HeaderProps) => {
+    return (
+        <header className="flex items-center justify-center bg-background h-[5rem] ">
+            <ContainerContent>
+                <div className="flex items-center justify-between py-2">
+                    <Link href="/">
+                        <Logo src={props.logoSrc}/>
+                    </Link>
                 </div>
             </ContainerContent>
         </header>

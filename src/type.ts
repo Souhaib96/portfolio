@@ -21,6 +21,12 @@ export type Project = {
     link?: NavLinks;
     };
 
+export type Testimonial = {
+    id: string;
+    name: string;
+    content: string;
+}
+
 export type Service = {
     id: string;
     name: string;

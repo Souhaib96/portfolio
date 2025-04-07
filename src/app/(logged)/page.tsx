@@ -71,7 +71,7 @@ export default function Home() {
           <div className="h-full w-full flex flex-col justify-center  gap-3  ">
             <p>Bonjour Je {"m'appel"}</p>
             <h2 className="text-5xl font-semibold">
-              Sohaib
+              Souhaib Abdessamie Bounah
             </h2>
             <h1 className="text-4xl text-primary font-bold">
               {"Fullstack developpeur"}

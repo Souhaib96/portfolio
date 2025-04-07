@@ -1,6 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit';
 import loginSlice from './login/loginSlice';
 import usersSlice from './user/usersSlice';
+import testimonialSlice from './testimonies/testimoniesSlice';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
@@ -16,10 +17,16 @@ const usersConfig = {
     storage: storage
 };
 
+const testimonialsConfig = {
+    key: 'testimonials',
+    storage: storage
+};
+
 export const store = configureStore({
     reducer: {
         login: persistReducer(loginConfig,loginSlice),
         users: persistReducer(usersConfig,usersSlice),
+        testimonials: persistReducer(testimonialsConfig,testimonialSlice),
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({ serializableCheck: false }),
