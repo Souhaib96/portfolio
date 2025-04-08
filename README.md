@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+# Projet portfolio
+## Installation
+```bash
+npm i
+```
+## Lancer l'application
+Lancer le serveur:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instructions pour commencer
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Inscription** : Rendez-vous sur la page d'inscription et créez un compte.
+![Page inscription](docs/inscription.png)
+2. **Connexion** : Une fois inscrit, accédez à la page de connexion pour vous connecter.
+![Page connexion](docs/conexion.png)
+3. **Navigation** :
+    - Après connexion, vous serez redirigé vers la page d'accueil.
+    ![Page accueil](docs/accueil.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    - vous pourrez consulter la liste des projets.
+    ![Page projets](docs/projets.png)
+    - vous pourrez consulter les détails d'un projet.
+    ![Page Détails d'un projet](docs/projet.png)
+    - vous pourrez consulter les témoignages(qui seront vide au début).
+    ![Page témoignages](docs/témognages.png)
+    - vous pouvez ajouter  un temoignage.
+    ![Page ajout témoignage](docs/ajout_témoignage.png)
+    - vous pouvez modifier un temoignage que vous avez vous même éffectuer.
+    ![Page modifier témoignage](docs/modifier_témoignage.png)
+    
 
-## Learn More
+## Gestion de l'état avec Redux-Persist
 
-To learn more about Next.js, take a look at the following resources:
+Dans ce projet, nous utilisons `redux-persist` pour gérer la persistance de l'état global de l'application. `redux-persist` est une bibliothèque qui permet de sauvegarder automatiquement l'état de Redux dans un stockage persistant, comme le localStorage ou le sessionStorage, afin que les données soient conservées même après un rechargement de la page ou une fermeture du navigateur.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Cas d'utilisation dans ce projet :
+- **Utilisateurs** : Les informations des utilisateurs connectés sont sauvegardées pour éviter de demander une nouvelle authentification à chaque rechargement de la page.
+- **Authentification** : Les jetons d'authentification (tokens) sont persistés pour maintenir la session active.
+- **Témoignages** : Les données des témoignages sont également stockées pour améliorer les performances et réduire les appels réseau inutiles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Grâce à `redux-persist`, l'expérience utilisateur est plus fluide et les données importantes restent disponibles même en cas de rafraîchissement de l'application.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

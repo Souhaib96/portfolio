@@ -75,7 +75,7 @@ export default function RegisterForm(){
                     )}
                 />
             <Button type="submit" disabled={form.formState.isSubmitting}>
-                {form.formState.isSubmitting ? "En cours..." : "Connexion"}
+                {form.formState.isSubmitting ? "En cours..." : "Inscription"}
             </Button>
 
             </form>

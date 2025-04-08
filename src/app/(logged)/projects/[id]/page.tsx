@@ -25,7 +25,7 @@ async function ProjectPage({ params }: { params: ProjectParams }) {
       </Section>
       <Section>
         <ContainerContent className="gap-8">
-          <H2>Overview</H2>
+          <H2>{"Résumé"}</H2>
           <div>
             <p>
             {project?.overview}
@@ -35,7 +35,7 @@ async function ProjectPage({ params }: { params: ProjectParams }) {
       </Section>
       <Section>
         <ContainerContent className="gap-8">
-          <H2 className="text-start">Role & Responsibilities</H2>
+          <H2 className="text-start">Role & Responsabilites</H2>
           <ul className="flex flex-col ps-4 gap-4 list-disc marker:text-primary">
             
                 {
@@ -48,7 +48,7 @@ async function ProjectPage({ params }: { params: ProjectParams }) {
       </Section>
       <Section>
         <ContainerContent className="gap-8">
-          <H2 className="text-start">Project Highlights</H2>
+          <H2 className="text-start">Résultas</H2>
           <ul className="flex flex-col ps-4 gap-4 list-disc marker:text-primary">
             
                 {

@@ -35,7 +35,7 @@ export default function ModifyTestimony() {
         <main>
         <Section>
             <H1>
-            {"Ajouter un témoignage"}
+            {"Modifier un témoignage"}
             </H1>
         </Section>
         <Section>
