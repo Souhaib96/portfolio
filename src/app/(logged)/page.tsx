@@ -76,7 +76,10 @@ export default function Home() {
             <h1 className="text-4xl text-primary font-bold">
               {"Fullstack developpeur"}
             </h1>
-            <p className="max-w-md">Je suis passioner  par...</p>
+            <p className="max-w-md">Je suis passioner par la technologie et le
+              développement web. J{"'"}aime créer des applications web modernes et 
+
+            </p>
             <div className="flex gap-4">
               <Button >Obtenir mon CV</Button>
             </div>
@@ -100,7 +103,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-2">
               <h3 className="text-2xl font-semibold">
-                Salut, je suis Sohaib
+                Salut, je suis Souhaib
               </h3>
               <p>
                 Je suis un développeur web passionné par la création d'expériences

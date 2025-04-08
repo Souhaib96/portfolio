@@ -70,22 +70,6 @@ async function ProjectPage({ params }: { params: ProjectParams }) {
           </ul>
         </ContainerContent>
       </Section>
-      {
-        project?.link
-        &&
-        <Section>
-          <ContainerContent className="items-center gap-8">
-            <H2>More About</H2>
-            {
-              <Link href={project.link.href}>
-                <Button>
-                  {project.link.name}
-                </Button>
-            </Link>
-            }
-          </ContainerContent>
-        </Section>
-      }
     </main>
   );
 }
