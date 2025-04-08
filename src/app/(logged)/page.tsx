@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import H2 from "@/components/ui/h2";
 import { Skill, SkillCategory } from "@/type";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -81,7 +82,9 @@ export default function Home() {
 
             </p>
             <div className="flex gap-4">
-              <Button >Obtenir mon CV</Button>
+                <a href="/CV_Souhaib.pdf" download>
+                <Button>Obtenir mon CV</Button>
+                </a>
             </div>
           </div>
         </ContainerContent>
